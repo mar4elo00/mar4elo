@@ -1,0 +1,43 @@
+.blase{background-color:blue;
+    width:150px;
+    text-align:center;
+    border: 1px 1px 3px 3px; 
+    border-color:black;
+    border-radius:1px 20px 1px 20px;
+    
+
+}
+.image{
+    width: 60px;
+}
+.button{
+    font-size: 30px;
+    color: white;
+    width: 200px;
+    height: 100px;
+    background-color:#69afff;
+    border-radius: 10px;
+}
+.button:hover{
+    color:black;
+    background-color:white;
+    cursor:pointer;
+}
+.divs{
+    width:60%;
+    text-align:center;
+    background-color:white;
+}
+.div2:hover{
+    cursor:pointer;
+}
+.div2{
+    width:20%;
+    margin-right:-20px;
+    text-align:center;
+}
+.divout{
+    width:2560px;
+    background-color:white;
+    text-align:right;
+}
