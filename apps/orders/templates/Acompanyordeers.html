@@ -1,23 +1,7 @@
+{% extends 'headerfooter.html' %} 
 {% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'mark/style.css' %}" media='all' />
+{% block xf %}
 
-<header class="headerstyle">
-    <input class="buttom" name="click" type="button" onclick="window.location.href='/'" value="Главная страница">
-    <input class="buttom" name="click" type="button" onclick="window.location.href='/mark/'" value="Добавить Сотрудника">
-    <input class="buttom" name="click" type="button" onclick="window.location.href='/orders/'" value="Добавить Поставщика">
-    <input class="buttom" name="click" type="button" onclick="window.location.href='/companyordeers/'" value="Добавить заказ для компании">
-    <input class="buttom" name="click" type="button" onclick="window.location.href='/passportdate/'" value="Паспортные данные">
-  
-</header>
-
-{% for x in companyordeer %}
-
-   <h4> {{ x.companyordeers }}</h4> 
-    
-
-    <br>
-
-{% endfor %}
 <div class="bodyy">
 
     <h2 align="center" class="h1"> Заказ для компании</h2>
@@ -42,15 +26,8 @@
         </form>
     </div>
 </div>
+{% endblock %}
 
-<footer class="podval">
-    <a href="https://www.instagram.com/_mar4elo00/">
-      <img class="inst" src="/static/home/logo.png" alt="" width="50" height="50">
-    </a>
-  <h1 class="h2">
-    +996505427860
-  </h1>
-  </footer>
 
 <style>
     .h2{

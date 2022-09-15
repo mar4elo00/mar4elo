@@ -11,7 +11,7 @@ urlpatterns = [
     path("",include('apps.onoxo.urls')),
     path("", include('apps.employees.urls')),
     path("",include('apps.orders.urls')),
-    
+    path("", include('apps.users.urls')),
     
      ]
 if settings.DEBUG:

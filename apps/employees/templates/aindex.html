@@ -1,175 +1,27 @@
+{% extends 'headerfooter.html' %} 
 {% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'mark/style.css' %}" media='all' />
-<header class="headerstyle">
-    <input class="buttom" name="click" type="button" onclick="window.location.href='/'" value="Главная страница">
-    <input class="buttom" name="click" type="button" onclick="window.location.href='/mark/'" value="Добавить Сотрудника">
-    <input class="buttom" name="click" type="button" onclick="window.location.href='/orders/'" value="Добавить Поставщика">
-    <input class="buttom" name="click" type="button" onclick="window.location.href='/companyordeers/'" value="Добавить заказ для компании">
-    <input class="buttom" name="click" type="button" onclick="window.location.href='/passportdate/'" value="Паспортные данные">
-  
-  </header>
-<body>
-
-{% comment %} {% for x in employees %}
-
-   <h4> {{ x.name }}</h4> 
-    {% comment %} {{x.email}} 
-
-    <br>
-
-{% endfor %}  {% endcomment %}
-
-
+{% block xf %}
 
 <div class="bodyy">
 
-    <h2 align="center" class="h1"> Данные о сотруднике</h2>
-    <div align="center">
-        <form method="POST">
-            {% csrf_token %}
-        <input class="table" name="a" type="text" required placeholder="Фамилия">
-        <input class="table" name="b" type="text" required placeholder="Имя">
-        <input class="table" name="c" type="text" required placeholder="Отчество">
-        <input class="table" name="d" type="date" required placeholder="Дата рождения">
-        <input class="table" name="e" type="number" required placeholder="Номер телефона">
-        <input class="table" name="f" type="text" required placeholder="Email адрес">
-        <br>
-            <br>
-        <input class="table1" id="" type="submit" value="Отправить">
-        </form>
-    </div>
+  <h2 align="center" class="h1"> Данные о сотруднике</h2>
+  <div align="center">
+      <form method="POST">
+          {% csrf_token %}
+      <input class="table" name="a" type="text" required placeholder="Фамилия">
+      <input class="table" name="b" type="text" required placeholder="Имя">
+      <input class="table" name="c" type="text" required placeholder="Отчество">
+      <input class="table" name="d" type="date" required placeholder="Дата рождения">
+      <input class="table" name="e" type="number" required placeholder="Номер телефона">
+      <input class="table" name="f" type="text" required placeholder="Email адрес">
+      <br>
+          <br>
+      <input class="table1" id="" type="submit" value="Отправить">
+      </form>
+  </div>
 </div>
-<footer class="podval">
-    <a href="https://www.instagram.com/_mar4elo00/">
-      <img class="inst" src="/static/home/logo.png" alt="" width="50" height="50">
-    </a>
-  <h1 class="h3">
-    +996505427860
-  </h1>
-  </footer>
-<style>
-    .h3{
-        color:white;
-        text-align:center;
-        margin-top:-40px;
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-        font-weight: 300;
-        font-size:24px;
-      }
-      .inst{
-        padding-top:15px;
-        padding-left:10px;
-      }
-      .buttom1{
-        background-color:rgba(0, 0, 0, 0);
-        color:white;
-        border-color:rgb(58,58,58);
-        border:0px;
-      }
-      .podval{
-        background-color:rgba(0, 0, 0, 0.80);
-        height:84px;
-        margin-top:217px;
-        margin-left:-8px;
-      }
-      .buttom{
-        background-color:rgb(58,58,58);
-        color:white;
-        border-color:rgb(58,58,58);
-        border:0px;
-      }
-      .buttom:hover{
-        cursor:pointer;
-        color:rgb(72, 183, 217);
-      }
-      .headerstyle{
-        background-color:rgb(58,58,58 );
-        height:30px;
-        margin-top:-9px;
-        margin-left:-10px;
-        margin-right:-10px;
-        padding-top:10px;
-      }
-      .header{
-        column-count:4;
-        
-      }
-    .inputst{
-        weidth:400px;
-        background-color: rgba(176, 228, 250, 0.27);
-        color: #ffedd6;
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-        font-weight: 400px;
-        border-radius: 10px;
-        border:1px solid rgba(255, 255, 255, 0.18);
-    }
-   .background{
-        width:100%;
-        height:500px;
-        background-repeat:no-repeat;
-        background-size:100%;
-        background-position:center;
-        background-image:url("https://images.unsplash.com/photo-1516880711640-ef7db81be3e1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"); 
-      
-      } 
-      body{
-        background-repeat:no-repeat;
-        background-size:100%;
-        background-position:center;
-       
-        background-image:url("https://images.pexels.com/photos/1668928/pexels-photo-1668928.jpeg"); 
-      }
-      .table{
-        margin-left:20px;
-        margin-top:5px;
-        width:300px;
-        background-color: rgba(255, 251, 240, 0.27);
-        color: #ffedd6;
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-        font-weight: 400;
-        border-radius: 4px;
-        border:1px solid rgba(255, 255, 255, 0.18);
-    }
-    .table:hover{
-        cursor: pointer;
-    }
-    .table1{
-        width:300px;
-        margin-left:20px;
-        background-color: rgba(54, 46, 117, 0.32);
-        color: #ffedd6;
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-        font-weight: 400;
-        border:1px solid rgba(255, 255, 255, 0.18);
-        border-radius: 4px;
-    }
-    .table1:hover{
-        cursor: pointer;
-        background-color: rgba(89, 49, 133, 0.53);
-    }
-    .h1{
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-        font-weight: 600;
-        background: -webkit-linear-gradient(45deg, #bdb5ff, #ffdec6);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-    }
-    .bodyy{
-        display:flex;
-        align-items:center;
-        justify-content:center;
-        align-content: center;
-        margin-top: 200px;
-        margin-left: auto;
-        margin-right: auto;
-        align-self: center;
-        width: 600px;
-        background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        border-radius: 20px;
-        border:1px solid rgba(255, 255, 255, 0.18);
-        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-    }
-</style>
+
+
+{% endblock %}
+
 

@@ -1,106 +1,24 @@
-{%load static%}
-<html>
-<link rel="stylesheet" type="text/css" href="{% static 'admin/css/stil.css' %}" media='all' />
-<header class="headerstyle">
-  <input class="buttom" name="click" type="button" onclick="window.location.href='/'" value="Главная страница">
-  <input class="buttom" name="click" type="button" onclick="window.location.href='/mark/'" value="Добавить Сотрудника">
-  <input class="buttom" name="click" type="button" onclick="window.location.href='/orders/'" value="Добавить Поставщика">
-  <input class="buttom" name="click" type="button" onclick="window.location.href='/companyordeers/'" value="Добавить заказ для компании">
-  <input class="buttom" name="click" type="button" onclick="window.location.href='/passportdate/'" value="Паспортные данные">
+{% extends 'headerfooter.html' %} 
+{% load static %}
+{% block xf %}
+  
 
-</header>
-<body class="background">
+
+
 <div class="body">
+  <h2 align="center" class="h5"> Выбирете дейстивие</h2>
+    <div align="center">
+        <form method="post" style="width:100%;">
     <input class="knopka" type="button" onclick="window.location.href='mark/'" value="Добавить Сотрудника">
     <input class="knopka" type="button" onclick="window.location.href='orders/'" value="Добавить Поставщика">
     <input class="knopka" type="button" onclick="window.location.href='companyordeers/'" value="Добавить заказ для компании">
     <input class="knopka" type="button" onclick="window.location.href='passportdate/'" value="Паспортные данные">
     
     </div>
-</body>
-<footer class="podval">
-  <a href="https://www.instagram.com/_mar4elo00/">
-    <img class="inst" src="/static/home/logo.png" alt="" width="50" height="50">
-  </a>
-<h1 class="h1">
-  +996505427860
-</h1>
-</footer>
+    {% endblock %}
 <style>
-  .h1{
-    color:white;
-    text-align:center;
-    margin-top:-40px;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 300;
-    font-size:24px;
-  }
-  .inst{
-    padding-top:15px;
-    padding-left:10px;
-  }
-  .buttom1{
-    background-color:rgba(0, 0, 0, 0);
-    color:white;
-    border-color:rgb(58,58,58);
-    border:0px;
-  }
-  .podval{
-    background-color:rgba(0, 0, 0, 0.80);
-    height:84px;
-    width:100%;
-    margin-top:130px;
-    margin-left:-10px;
-  }
-  .buttom{
-    background-color:rgb(58,58,58);
-    color:white;
-    border-color:rgb(58,58,58);
-    border:0px;
-  }
-  .buttom:hover{
-    cursor:pointer;
-    color:rgb(72, 183, 217);
-  }
-  .headerstyle{
-    background-color:rgb(58,58,58 );
-    height:min;
-    width:100%;
   
-    margin-top:-9px;
-    margin-left:-10px;
     
-    padding-top:10px;
-  }
-  .header{
-    column-count:4;
-    margin-left:10px;
-    
-  }
-  body{
-    
-  }
-  .body{
-        align-content:center;
-        padding-top:400px;
-        
-        margin-right:auto;
-        margin-left:auto;
-        align-self:center;
-        width:1000px;
-     
-
-    }
-  .knopka{
-    font-size:40px;
-    background-color:rgba(131,211,255, 032);
-    color:white;
-    border:1px solid rgba(255,255,255, 0.18);
-    border-radius:4px;
-    background: linear-gradient(135deg, rgba(56, 45, 43, 0.1), rgba(56, 45, 43, 0));
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-  }
   .background{
     width:100%;
     height:500px;

@@ -4,7 +4,9 @@ from django.shortcuts import render
 from apps import employees
 from .models import *
 from django.shortcuts import redirect, render
+from django.contrib.auth.decorators import login_required
 
+@login_required
 def Aindex(request):
     #pass
     if request.method == "GET":

@@ -31,7 +31,7 @@ INSTALLED_APPS = [
     'apps.employees',
     'apps.product',
     'apps.orders',
-    
+    'apps.users',
     
   
     # libs
