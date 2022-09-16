@@ -1,7 +1,10 @@
 from contextlib import redirect_stderr
+from unicodedata import category
 from xml.dom.minidom import Element
 from django.shortcuts import render
 from django.contrib.auth.forms import UserCreationForm
+
+from apps.product.models import Products
 from .models import *
 from django.shortcuts import redirect, render
 from django.contrib.auth import login, authenticate, logout
@@ -49,3 +52,8 @@ def login_user(request):
 def logout_user (request):
     logout(request)
     return redirect("/")
+
+
+def urna(requset):
+    if requset.method=="GET":
+       return render(requset,'urna.html')

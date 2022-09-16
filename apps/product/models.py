@@ -63,7 +63,7 @@ class Products(models.Model):
         verbose_name_plural = "Товар"
         
     def __str__(self):
-        return self.name + " --- " + self.category.appointment
+        return self.name + " --- " + self.brend.status
         
 
 class Haracteristic_Product(models.Model):

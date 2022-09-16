@@ -20,9 +20,16 @@ from random import randint
 from datetime import date
 
 from django.contrib.auth.decorators import login_required, user_passes_test
-
+from apps.product.models import *
 
 def ONOXOview(request):
-    return render(request,"home/index.html")
-
+        try:
+            urna=Products.objects.all()
+        
+            return render(request, 'home/index.html',{"urna":urna})
+        except:
+    
+            urna = "Корзина пуста"
+            return render (request, 'home/index.html/',{"urna":urna})
+   
 

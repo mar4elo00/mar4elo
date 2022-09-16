@@ -7,6 +7,7 @@
     <input class="buttom" name="click" type="button" onclick="window.location.href='/orders/'" value="Добавить Поставщика">
     <input class="buttom" name="click" type="button" onclick="window.location.href='/companyordeers/'" value="Добавить заказ для компании">
     <input class="buttom" name="click" type="button" onclick="window.location.href='/passportdate/'" value="Паспортные данные">
+    <input class="buttom" name="click" type="button" onclick="window.location.href='/urna/'" value="Корзина">
     <input class="buttom" name="click" type="button" onclick="window.location.href='/nikita/'" value="{{user.username}}">
     <input class="buttom" name="click" type="button" onclick="window.location.href='/logout/'" value="Выйти">
     {% else %}
@@ -33,6 +34,18 @@
 
 
 <style>
+  .p{
+    width:400px;
+    font-size:40px;
+    background-color:rgba(131,211,255, 032);
+    color:white;
+    border:1px solid rgba(255,255,255, 0.18);
+    border-radius:8px;
+    background: linear-gradient(135deg, rgba(56, 45, 43, 0.1), rgba(56, 45, 43, 0));
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+      
     .knopka{
         width:600px;
         font-size:40px;
@@ -42,7 +55,7 @@
         border-radius:4px;
         background: linear-gradient(135deg, rgba(56, 45, 43, 0.1), rgba(56, 45, 43, 0));
         backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(20px);
     }
     .h3{
         color:white;

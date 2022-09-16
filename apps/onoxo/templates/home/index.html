@@ -6,19 +6,33 @@
 
 
 <div class="body">
-  <h2 align="center" class="h5"> Выбирете дейстивие</h2>
+  <h2 align="center" class="h5"> Дейстивие</h2>
     <div align="center">
-        <form method="post" style="width:100%;">
-    <input class="knopka" type="button" onclick="window.location.href='mark/'" value="Добавить Сотрудника">
-    <input class="knopka" type="button" onclick="window.location.href='orders/'" value="Добавить Поставщика">
-    <input class="knopka" type="button" onclick="window.location.href='companyordeers/'" value="Добавить заказ для компании">
-    <input class="knopka" type="button" onclick="window.location.href='passportdate/'" value="Паспортные данные">
-    
+      
+          <form method="post" style="width:100%;">
+            <input class="knopka" type="button" onclick="window.location.href='mark/'" value="Добавить Сотрудника">
+            <input class="knopka" type="button" onclick="window.location.href='orders/'" value="Добавить Поставщика">
+            <input class="knopka" type="button" onclick="window.location.href='companyordeers/'" value="Добавить заказ для компании">
+            <input class="knopka" type="button" onclick="window.location.href='passportdate/'" value="Паспортные данные">
+
+
+         <div class="cqwe">    
+             {% for i in urna %}
+             {% if i.category.appoinment == "testw"%}
+              <p class="p">{{ i.name }}  {{ i.category.appoinment }}</p>
+              {% endif %}
+              {% endfor %}
+            {% for i in urna %}
+               {% if i.category.appoinment == "teste"%}
+                   <p class="p">{{ i.name }}  {{ i.category.appoinment }}</p>
+            {% endif %}
+            {% endfor %}
+          
+        </div>     
     </div>
-    {% endblock %}
-<style>
-  
-    
+ </div>
+  {% endblock %}
+<style>  
   .background{
     width:100%;
     height:500px;
