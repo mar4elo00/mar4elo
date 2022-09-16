@@ -12,7 +12,7 @@ urlpatterns = [
     path("", include('apps.employees.urls')),
     path("",include('apps.orders.urls')),
     path("", include('apps.users.urls')),
-    
+    path("", include('apps.product.urls')),
      ]
 if settings.DEBUG:
         urlpatterns += static(settings.MEDIA_URL,

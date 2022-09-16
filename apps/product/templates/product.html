@@ -1,0 +1,29 @@
+
+
+{% extends 'headerfooter.html' %} 
+{% load static %}
+{% block xf %}
+
+<div class="bodyy">
+
+    <h2 align="center" class="h1"> Добавить товар</h2>
+    <div align="center">
+        <form method="POST">
+            {% csrf_token %}
+        <input class="table" name="name" type="text" required placeholder=" Название товара">
+        <input class="table" name="" type="text"required placeholder="Вид товара" >
+        <input class="table" name="" type="text"required placeholder="Назначение" >
+        <input class="table" name="" type="text" required placeholder=" Категория">
+        <input class="table" name="" type="text" required placeholder=" Бренд">
+        <input class="table" name="" type="number"required placeholder="Количество товара" >
+        <input class="table" name="" type="number"required placeholder="Штрих код? нет это волосы" >
+        <br>
+            
+        <input class="table1" id="" type="submit" value="Отправить">
+        </form>
+    </div>
+</div>
+{% endblock %}
+
+
+
