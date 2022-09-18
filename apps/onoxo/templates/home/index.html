@@ -3,71 +3,76 @@
 {% block xf %}
   
 
+<h2 align="center" class="h5"> Товары</h2>
 
-
-<div class="body">
-  <h2 align="center" class="h5"> Дейстивие</h2>
+<div class="left">
+  
+  
     <div align="center">
       {% for i in category %}
             <form method="POST">
               {% csrf_token %}
-              <input class="knopka" type="submit"  name="categorys" value="{{ i.appoinment }}">
+              <input class="categorykl" type="submit"  name="categorys" value="{{ i.appoinment }}">
                 
             </form><br>
         {% endfor %}
-      
-          
+</div>
+        
            
             
             
-          <div  style="width:100%;">
+          <!--<div  style="width:100%;">
             <input class="knopka" type="button" onclick="window.location.href='mark/'" value="Добавить Сотрудника">
             <input class="knopka" type="button" onclick="window.location.href='orders/'" value="Добавить Поставщика">
             <input class="knopka" type="button" onclick="window.location.href='companyordeers/'" value="Добавить заказ для компании">
             <input class="knopka" type="button" onclick="window.location.href='passportdate/'" value="Паспортные данные">
-            <input class="knopka" type="button" onclick="window.location.href='product/'" value="Добавить товар">
+            <input class="knopka" type="button" onclick="window.location.href='product/'" value="Добавить товар"> !-->
             
 
-          <div class="cqwe">    
+          <div class="right">    
             <br><br><br><br>
-            {% if categorys == None %}
+            <div class="post">
+              {% if categorys == None %}
             {% for i in urna %}
              <form method="POST">
                {% csrf_token %}
                <img src="{{ i.photo.url }}" alt="" class="imge" ><br>
-               <p class="p">{{ i.name }}  {{ i.category.appoinment }}</p>
+               <p class="tip">{{ i.name }}  {{ i.category.appoinment }}</p>
                <input class="knopka" type="text" readonly style="display:none;" name="userid" value="{{ user.id }}">
                <input class="knopka" type="text" readonly style="display:none;" name="product" value="{{ i.id }}">
            
-               <input class="table" name="summ" type="number" >
-               <input class="knopka" type="submit" readonly value="В корзину">
+               <input class="col" name="summ" type="number" >
+               <input class="corzina" type="submit" readonly value="В корзину">
              </form>
+            </div>
+            <div class="post">
              {% endfor %}
-           {% else %}
-           {% for i in urna %}
-              {% if categorys == i.category.appoinment %}
+             
+                {% else %}
+                {% for i in urna %}
+                {% if categorys == i.category.appoinment %}
 
-              <form method="POST">
-                {% csrf_token %}
-                <img src="{{ i.photo.url }}" alt="" class="imge" ><br>
-                <p class="p">{{ i.name }}  {{ i.category.appoinment }}</p>
-                <input class="knopka" type="text" readonly style="display:none;" name="userid" value="{{ user.id }}">
-                <input class="knopka" type="text" readonly style="display:none;" name="product" value="{{ i.id }}">
-            
-                <input class="table" name="summ" type="number" >
-                <input class="knopka" type="submit" readonly value="В корзину">
-              </form>
-            {% endif %}
-
+                <form method="POST">
+                  {% csrf_token %}
+                  <img src="{{ i.photo.url }}" alt="" class="imge" ><br>
+                  <p class="tip">{{ i.name }}  {{ i.category.appoinment }}</p>
+                  <input class="knopka" type="text" readonly style="display:none;" name="userid" value="{{ user.id }}">
+                  <input class="knopka" type="text" readonly style="display:none;" name="product" value="{{ i.id }}">
+              
+                  <input class="col" name="summ" type="number"   >
+                  <input class="corzina" type="submit" readonly value="В корзину">
+                </form>
+              {% endif %}
+          
 
          {% endfor %}
 
                {% endif %}
-         
-
+            
+              </div>
          
           </div>
-        </div>     
+        </>     
     </div>
  </div>
   {% endblock %}

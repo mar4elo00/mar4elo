@@ -1,7 +1,7 @@
 {% load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'mark/style.css' %}" media='all' />
 <header class="headerstyle">
-    <input class="buttom" name="click" type="button" onclick="window.location.href='/'" value="Главная страница">
+    <input class="buttom" name="click" type="button" onclick="window.location.href='/'" value="Товары">
     {% if request.user.is_authenticated %}
     <input class="buttom" name="click" type="button" onclick="window.location.href='/mark/'" value="Добавить Сотрудника">
     <input class="buttom" name="click" type="button" onclick="window.location.href='/orders/'" value="Добавить Поставщика">
@@ -19,7 +19,7 @@
 <body class="background">
 {% block xf %}
 {% endblock %}
-<footer class="podval">
+<!--<footer class="podval">
     <a href="https://www.instagram.com/_mar4elo00/">
       <img class="inst" src="/static/home/logo.png" alt="" width="50" height="50">
     </a>
@@ -27,13 +27,88 @@
     +996505427860
   </h1>
   </footer>
-</body>
+</body> !-->
 
     
 
 
 
 <style>
+  .col{
+    width:50px;
+    background-color:rgb(255,255,255, 0.5);
+    border:none;
+    border-radius:10px;
+    margin-left:250px;
+  }
+  .post img{
+    width:300px;
+    height:300px;
+    border-radius:20px;
+    object-fit:cover;
+    padding-top:10px;
+  }
+  .post{
+    width:300px;
+    padding-left:40px;
+    background-color:rgb(255,255,255, 0.5);
+    border-radius:20px;
+    padding-right:40px;
+    margin-right:10px;
+    align-items:center;
+    display:flex;
+    margin-top:10px;
+  
+
+  }
+
+
+  .corzina{
+    width:300px;
+    background-color:rgba(45, 224, 94, 0.5);
+    border:none;
+    text-align:center;
+    border-radius:5px;
+    height:25px;
+    margin-top:20px;
+  }
+  .tip{
+    color:white;
+    font-size:24px;
+    text-align:center;
+  }
+  .categorykl{
+    margin-top:20px;
+    margin-left:10px;
+    margin-right:10px;
+    color:white;
+    width:200px;
+    text-align:center;
+    background-color:rgba(131,211,255, 032);
+    border:1px solid rgba(255,255,255, 0.18);
+    border-radius:4px;
+    background: linear-gradient(135deg, rgba(55, 31, 77, 0.8), rgba(61, 14, 87, 0.8));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(20px);
+    height:50px;
+    font-size:30px;
+  }
+  .right{
+    display:flex;
+    flex-direfction:column;
+    padding-left:20px;
+    width:70%;
+    height:500px;
+    
+  }
+  .left{
+    height:200px;
+    display:flex;
+    flex-direfction:column;
+    width:220px;
+    background-color:rgb(255,255,255, 0.5);
+    border-radius:20px;
+  }
   .imge{
     width:400px;
 
@@ -133,6 +208,8 @@
         background-repeat:no-repeat;
         background-size:100%;
         background-position:center;
+        width:100%;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
        
         {% comment %} background-image:url("https://images.pexels.com/photos/1668928/pexels-photo-1668928.jpeg");  {% endcomment %}
         margin: 0;

@@ -27,7 +27,7 @@ def register(request):
         Register.objects.create(user = users, dob=dob)
         user = authenticate(username=nickname, password = password)
         login(request, user)
-        return redirect("mark")
+        return redirect("/")
             
             
 def login_user(request):
@@ -41,7 +41,7 @@ def login_user(request):
         if user is not None:
             if user.is_active:
                 login(request, user)
-                return redirect("mark")
+                return redirect("/")
             else:
                 error = "Неверный логин или пароль"
                 return render(request, 'login.html', {"error":error})
