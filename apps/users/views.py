@@ -1,4 +1,5 @@
 from contextlib import redirect_stderr
+from itertools import product
 from unicodedata import category
 from xml.dom.minidom import Element
 from django.shortcuts import render
@@ -53,7 +54,9 @@ def logout_user (request):
     logout(request)
     return redirect("/")
 
-
-def urna(requset):
+# @login_required
+def urna(requset, id):
     if requset.method=="GET":
-       return render(requset,'urna.html')
+        urna= Urna.objects.filter(user_id=id)
+        category = Category.objects.all()
+        return render(requset,'urna.html',{"urna":urna, "category":category})

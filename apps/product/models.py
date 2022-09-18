@@ -1,3 +1,4 @@
+from distutils.command.upload import upload
 from tabnanny import verbose
 from django.db import models
 
@@ -34,7 +35,7 @@ class Category (models.Model):
         
 
 class Brend (models.Model):
-    appointment=models.CharField(max_length=255, verbose_name="назначение бренда")
+    appointment=models.CharField(max_length=255, verbose_name="название бренда")
     face= models.CharField(max_length=30,verbose_name="Отвечающее лицо")
     contact=models.CharField(max_length=30,verbose_name="номер")
     email = models.EmailField()
@@ -57,6 +58,7 @@ class Products(models.Model):
     brend= models.ForeignKey(to=Brend,on_delete=models.CASCADE , verbose_name="Бренд")
     sumt=models.IntegerField(verbose_name="количество товаров")
     scode=models.CharField(max_length=60,verbose_name="штрих код")
+    photo=models.ImageField(upload_to="media/product" , blank= True , null =True)
     
     class Meta:
         verbose_name = "Товар"

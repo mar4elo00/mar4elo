@@ -7,14 +7,14 @@
     <input class="buttom" name="click" type="button" onclick="window.location.href='/orders/'" value="Добавить Поставщика">
     <input class="buttom" name="click" type="button" onclick="window.location.href='/companyordeers/'" value="Добавить заказ для компании">
     <input class="buttom" name="click" type="button" onclick="window.location.href='/passportdate/'" value="Паспортные данные">
-    <input class="buttom" name="click" type="button" onclick="window.location.href='/urna/'" value="Корзина">
+    <input class="buttom" name="click" type="button" onclick="window.location.href='/urna/{{ user.id }}'" value="Корзина">
     <input class="buttom" name="click" type="button" onclick="window.location.href='/nikita/'" value="{{user.username}}">
     <input class="buttom" name="click" type="button" onclick="window.location.href='/logout/'" value="Выйти">
     {% else %}
     <input class="buttom" name="click" type="button" onclick="window.location.href='/register/'" value="Зарегестрироваться">
     <input class="buttom" name="click" type="button" onclick="window.location.href='/login/'" value="Войти">
     {% endif %}
-    
+  
   </header>
 <body class="background">
 {% block xf %}
@@ -34,6 +34,10 @@
 
 
 <style>
+  .imge{
+    width:400px;
+
+  }
   .p{
     width:400px;
     font-size:40px;
@@ -116,12 +120,13 @@
         border:1px solid rgba(255, 255, 255, 0.18);
     }
    .background{
+        background: #3b3537;
         width:100%;
         height:500px;
         background-repeat:no-repeat;
         background-size:100%;
         background-position:center;
-        background-image:url("https://images.unsplash.com/photo-1516880711640-ef7db81be3e1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"); 
+        {% comment %} background-image:url("https://images.unsplash.com/photo-1516880711640-ef7db81be3e1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");  {% endcomment %}
       
       } 
       body{
@@ -129,7 +134,7 @@
         background-size:100%;
         background-position:center;
        
-        background-image:url("https://images.pexels.com/photos/1668928/pexels-photo-1668928.jpeg"); 
+        {% comment %} background-image:url("https://images.pexels.com/photos/1668928/pexels-photo-1668928.jpeg");  {% endcomment %}
         margin: 0;
       }
       .table{
@@ -163,7 +168,7 @@
     .h5{
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         font-weight: 600;
-        background: -webkit-linear-gradient(45deg, #183620, #194239);
+        background: -webkit-linear-gradient(45deg, #cfe3e2, #b8dae0);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
     }

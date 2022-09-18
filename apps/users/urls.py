@@ -9,7 +9,7 @@ urlpatterns = [
     path("login/" ,login_user, name="login"),
     path("register/" ,register, name="register"),
     path("logout/", logout_user, name="logout"),
-    path("urna/",urna,name="urna"),
+    path("urna/<int:id>",urna,name="urna"),
     #path("resonalarea/",personalarea, name="personalarea"),
     
 ]

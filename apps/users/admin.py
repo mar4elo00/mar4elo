@@ -9,5 +9,5 @@ admin.site.index_title="Добро пожаловать"
 
 # Register your models here.
 admin.site.register(Register)
-admin.site.register(urna)
+admin.site.register(Urna)
 #admin.site.register(personalarea)
